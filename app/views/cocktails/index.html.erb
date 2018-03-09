@@ -13,7 +13,10 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-6 col-sm-offset-3">
-      <%= "Lorem ipsum dolor sit amet, consectetur adipisicing elit " * 100 %>
+      <%= "Lorem ipsum dolor sit amet, consectetur adipisicing elit " * 10 %>
     </div>
   </div>
+
+  <%= cl_image_tag("j8elqa9umhalof6pcmll", width: 400, height: 300, crop: :fill) %>
+  <%= cl_image_tag("hnvqwp8ivjifm5att5qo", width: 150, height: 150, crop: :thumb, gravity: :face) %>
 </div>
