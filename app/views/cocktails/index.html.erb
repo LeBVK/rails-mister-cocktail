@@ -1,11 +1,26 @@
-<%= render 'shared/banner' %>
+<!-- Banner -->
+<div class="banner">
+  <div class="banner-content">
+    <h1>HP Kocktail klub</h1>
+    <p>
+      <span id="banner-typed-text"></span>
+    </p>
+    <a class="btn btn-success btn-lg">Delight your senses</a>
+  </div>
+</div>
 
+<!-- Cocktails list -->
 <div class="container">
 
-  <h1>All cocktails</h1>
+  <h1 class="text-center" style="margin-top: 100px">All cocktails</h1>
 
   <% @cocktails.each do |cocktail| %>
-    <li><%= link_to cocktail.name, cocktail_path(cocktail) %></li>
+    <p>
+    <%= link_to cocktail.name, cocktail_path(cocktail) %>
+    <%= link_to cocktail_path(cocktail), method: :delete do %>
+        <i class='far fa-trash-alt'></i>
+    <% end %>
+    </p>
   <% end %>
 
 </div>
